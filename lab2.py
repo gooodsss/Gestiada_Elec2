@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.appName("lab2").getOrCreate()
 
-df = spark.read.csv("netflix_data.csv", header=True, inferSchema=True)
+df = spark.read.csv("netflix_titles.csv", header=True, inferSchema=True)
 
 df.printSchema()
 
