@@ -26,3 +26,17 @@ year_summary.show()
 
 # Transformations
 
+#Filter country
+philippines_data = df.filter(df.country.contains("Philippines"))
+
+print("Phillipine Content:")
+philippines_data.select("title", "release_year", "country").show()
+
+# Sort by year
+
+sorted_movies = df.orderBy("release_year", ascending=False)
+
+print("Latest Movies:")
+sorted_movies.select("title", "release_year").show(10)
+
+spark.stop()
