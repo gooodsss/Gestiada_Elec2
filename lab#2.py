@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 
-spark = SparkSession.builder .appname("Lab#2").getOrCreate()
+spark = SparkSession.builder.appname("lab#2").getOrCreate()
 
 df = spark.read.csv("netflix_data.csv", header=True, inferSchema=True)
 
